@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# 🎥 Candidate Information & Video Submission Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application that allows candidates to submit their personal information, upload a PDF resume, record a short video introduction, and review their submission — all in one seamless flow.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🌟 Features
 
-### `npm start`
+✅ **Candidate Information Form**
+- Collects first name, last name, position applied for, current position, and experience.  
+- Uploads resume (PDF only, ≤ 5MB).  
+- Validates all fields before proceeding.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+✅ **Video Recording Page**
+- Displays clear instructions for what to include in the video.  
+- Uses the **MediaRecorder API** to record live video and audio.  
+- Displays a timer and automatically stops at 90 seconds.  
+- Provides start and stop buttons for better user control.  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+✅ **Review Page**
+- Shows all submitted candidate details.  
+- Provides a **Download Resume** button.  
+- Embeds the recorded video for playback.  
 
-### `npm test`
+✅ **Backend Integration**
+- Node.js + Express handles API requests.  
+- **Multer** manages PDF file uploads.  
+- **MongoDB** stores candidate information, resume paths, and video data.  
+- Full validation for file size and type.  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🧠 Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Layer | Technologies |
+|--------|---------------|
+| **Frontend** | React, TailwindCSS / Bootstrap |
+| **Backend** | Node.js, Express.js |
+| **Database** | MongoDB |
+| **Uploads** | Multer (Resume), MediaRecorder API (Video) |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📂 Folder Structure
 
-### `npm run eject`
+candidate-portal/
+│
+├── backend/
+│ ├── server.js # Express app entry
+│ ├── routes/ # API routes
+│ ├── models/ # Mongoose schemas
+│ ├── controllers/ # Business logic (upload, save)
+│ 
+│
+├── frontend/
+│ ├── src/
+│ │ ├── pages/
+│ │ │ ├── CandidateForm.jsx
+│ │ │ ├── VideoRecorder.jsx
+│ │ │ └── ReviewCandidate.jsx
+│ │ ├── App.jsx
+│ │ ├── index.css
+│ │ └── main.jsx
+│ └── package.json
+│
+└── README.md
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ⚙️ Setup Instructions
 
-## Learn More
+### 🧩 Prerequisites
+Make sure you have installed:
+- [Node.js](https://nodejs.org/) (v16 or later)
+- [MongoDB](https://www.mongodb.com/)
+- npm or yarn package manager
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 🔹 Clone the Repository
+```bash
+git clone https://github.com/YOUR_GITHUB_USERNAME/candidate-portal.git
+cd candidate-portal
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Backend Setup
+npm install
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Frontend Setup
+npm install
+npm run start
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
