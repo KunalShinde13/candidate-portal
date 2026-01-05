@@ -34,10 +34,10 @@ A full-stack web application that allows candidates to submit their personal inf
 
 | Layer | Technologies |
 |--------|---------------|
-| **Frontend** | React, TailwindCSS / Bootstrap |
-| **Backend** | Node.js, Express.js |
-| **Uploads** | Multer (Resume), MediaRecorder API (Video) |
-| **Database** | MongoDB |
+| **Frontend** | React, TailwindCSS / Bootstrap 
+| **Backend** | Node.js, Express.js 
+| **Uploads** | Multer (Resume), MediaRecorder API (Video) 
+| **Database** | MongoDB 
 
 
 ---
